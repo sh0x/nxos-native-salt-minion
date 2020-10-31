@@ -23,8 +23,8 @@ To Build
     docker build -t salt-minion .
 
 
-Docker Hub:
-
+Docker Hub
+----------
 .. code-block::
 
     docker pull sh0x/nxos-native-salt-minion
