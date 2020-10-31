@@ -27,7 +27,10 @@ To Build
 
 Docker Hub
 ----------
+https://hub.docker.com/r/sh0x/nxos-native-salt-minion
+
 .. code-block::
+
 
     docker pull sh0x/nxos-native-salt-minion
     docker run \
