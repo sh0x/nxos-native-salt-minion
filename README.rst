@@ -30,6 +30,19 @@ Docker Hub
 https://hub.docker.com/r/sh0x/nxos-native-salt-minion
 
 .. code-block::
+
+    docker pull sh0x/nxos-native-salt-minion
+    docker run \
+      --network host \
+      --name=salt-minion \
+      --restart unless-stopped \
+      --volume "/tmp/nginx_local/nginx_1_be_nxapi.sock:/tmp/nginx_local/nginx_1_be_nxapi.sock:rw" \
+      -d -it sh0x/nxos-native-salt-minion
+
+
+SWITCH MGMT
+-----------
+.. code-block::
     
     interface mgmt0
       ip address <ip>
@@ -46,14 +59,4 @@ https://hub.docker.com/r/sh0x/nxos-native-salt-minion
     chkconfig --add docker
     ip netns exec management bash
     # Make sure name resolution works, or fix /etc/resolv.conf
-
-.. code-block::
-
-    docker pull sh0x/nxos-native-salt-minion
-    docker run \
-      --network host \
-      --name=salt-minion \
-      --restart unless-stopped \
-      --volume "/tmp/nginx_local/nginx_1_be_nxapi.sock:/tmp/nginx_local/nginx_1_be_nxapi.sock:rw" \
-      -d -it sh0x/nxos-native-salt-minion
 
