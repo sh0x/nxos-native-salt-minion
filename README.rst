@@ -30,7 +30,6 @@ Docker Hub:
     docker pull sh0x/nxos-native-salt-minion
     docker run \
       --network host \
-      --hostname=switch \
       --name=salt-minion \
       --restart unless-stopped \
       --volume "/tmp/nginx_local/nginx_1_be_nxapi.sock:/tmp/nginx_local/nginx_1_be_nxapi.sock:rw" \
