@@ -25,7 +25,7 @@ To Build
     docker build -t salt-minion .
 
 
-Docker Hub
+Docker
 ----------
 https://hub.docker.com/r/sh0x/nxos-native-salt-minion
 
