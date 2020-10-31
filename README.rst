@@ -19,6 +19,7 @@ To Build
 --------
 
 .. code-block::
+
     git clone https://github.com/sh0x/nxos-native-salt-minion.git
     cd nxos-native-salt-minion
     docker build -t salt-minion .
