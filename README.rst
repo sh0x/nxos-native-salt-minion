@@ -46,7 +46,7 @@ Switch
     # Make sure name resolution works, or fix /etc/resolv.conf
 
 Docker
-----------
+------
 https://hub.docker.com/r/sh0x/nxos-native-salt-minion
 
 .. code-block::
@@ -59,4 +59,16 @@ https://hub.docker.com/r/sh0x/nxos-native-salt-minion
       --volume "/tmp/nginx_local/nginx_1_be_nxapi.sock:/tmp/nginx_local/nginx_1_be_nxapi.sock:rw" \
       -d -it sh0x/nxos-native-salt-minion
 
+
+Nexus 9000v
+-----------
+The Ubuntu image is 650MB. If using Nexus 9000v the docker partition needs to be larger.
+
+
+.. code-block::
+
+    service docker stop
+    rm /bootflash/dockerpart
+    sed -i 's/small_dockerstrg.*/small_dockerstrg=1000/g' /etc/sysconfig/docker
+    service docker start
 
