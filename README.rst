@@ -40,8 +40,8 @@ https://hub.docker.com/r/sh0x/nxos-native-salt-minion
       -d -it sh0x/nxos-native-salt-minion
 
 
-SWITCH MGMT
------------
+Switch
+------
 .. code-block::
     
     interface mgmt0
