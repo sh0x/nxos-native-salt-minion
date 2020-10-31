@@ -1,7 +1,7 @@
 version: "3.8"
 services:
   salt-minion:
-    image: "longja/nxos-native-salt-minion"
+    image: "sh0x/nxos-native-salt-minion"
     hostname: salt-minion
     volumes: [/tmp/nginx_local/nginx_1_be_nxapi.sock:/tmp/nginx_local/nginx_1_be_nxapi.sock:rw]
     network_mode: host
