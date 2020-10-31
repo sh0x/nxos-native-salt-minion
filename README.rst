@@ -30,7 +30,24 @@ Docker Hub
 https://hub.docker.com/r/sh0x/nxos-native-salt-minion
 
 .. code-block::
+    
+    interface mgmt0
+      ip address <ip>
+      vrf member management
 
+    vrf context management
+      ip name-server 8.8.8.8
+      ip route 0.0.0.0/0 10.255.1.1
+
+.. code-block::
+
+    run bash sudo su 
+    service docker start
+    chkconfig --add docker
+    ip netns exec management bash
+    # Make sure name resolution works, or fix /etc/resolv.conf
+
+.. code-block::
 
     docker pull sh0x/nxos-native-salt-minion
     docker run \
