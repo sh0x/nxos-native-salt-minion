@@ -26,4 +26,4 @@ Docker Hub:
 
 .. code-block::
 
-docker pull sh0x/nxos-native-salt-minion
+    docker pull sh0x/nxos-native-salt-minion
