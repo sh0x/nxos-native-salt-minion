@@ -7,7 +7,7 @@ This is a native salt-minion docker container for Cisco Nexus 9k.
 Setup
 -----
 
-To run:
+To Run:
 
 .. code-block::
 
@@ -15,8 +15,15 @@ To run:
     cd nxos-native-salt-minion
     docker-compose up
 
-To build:
+To Build:
 
 .. code-block::
 
     docker build -t salt-minion .
+
+
+Docker Hub:
+
+.. code-block::
+
+docker pull sh0x/nxos-native-salt-minion
